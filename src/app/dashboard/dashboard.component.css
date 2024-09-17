@@ -1,0 +1,75 @@
+/* Container geral */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    background-color: #198754;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+  }
+  
+  .logout-button {
+    background-color: white;
+    color: #198754;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .logout-button:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Main content */
+  .dashboard-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    flex-grow: 1;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  /* Footer */
+  .dashboard-footer {
+    background-color: #198754;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .dashboard-footer p {
+    margin: 0;
+  }
+  

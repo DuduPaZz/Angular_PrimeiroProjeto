@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';  // Importe o componente do dashboard
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  standalone: true,
+  imports: [DashboardComponent]  // Certifique-se de adicionar o componente aqui
 })
 export class AppComponent {
-  title = 'projeto';
+  title = 'meu-app';
 }
