@@ -1,28 +1,28 @@
-<div class="dashboard-container">
-    <header class="dashboard-header">
-      <h1>Dashboard</h1>
-      <button class="logout-button">Logout</button>
-    </header>
+<div class="ponto-container">
+  <!-- Novo header para o nome do app -->
+  <header class="app-header">
+    <h1>APPT</h1> <!-- Altere para o nome do seu app -->
+  </header>
+
+  <header class="ponto-header">
+    <h1>Ponto Eletrônico</h1>
+    <button class="logout-button">Logout</button>
+  </header>
+
+  <section class="ponto-main">
+    <div class="card">
+      <h2>Bater Ponto</h2>
+      <button class="ponto-button" (click)="baterPonto()">Registrar Ponto</button>
+      <p id="ponto-msg"></p> <!-- Mensagem de confirmação -->
+    </div>
   
-    <section class="dashboard-main">
-      <div class="card">
-        <h2>Total Users</h2>
-        <p>1,230</p>
-      </div>
-  
-      <div class="card">
-        <h2>Active Sessions</h2>
-        <p>98</p>
-      </div>
-  
-      <div class="card">
-        <h2>Recent Activity</h2>
-        <p>25 new actions</p>
-      </div>
-    </section>
-  
-    <footer class="dashboard-footer">
-      <p>&copy; 2024 Your Company</p>
-    </footer>
-  </div>
-  
+    <div class="card">
+      <h2>Último Ponto Registrado:</h2>
+      <div id="ultimo-ponto" style="font-weight: bold;">{{ ultimoPonto }}</div>
+    </div>
+  </section>
+
+  <footer class="ponto-footer">
+    <p>&copy; 2024 Sua Empresa</p>
+  </footer>
+</div>
