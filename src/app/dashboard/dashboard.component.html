@@ -1,28 +1,42 @@
-<div class="ponto-container">
-  <!-- Novo header para o nome do app -->
-  <header class="app-header">
-    <h1>APPT</h1> <!-- Altere para o nome do seu app -->
-  </header>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="app-title">APPT</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <header class="ponto-header">
-    <h1>Ponto Eletrônico</h1>
-    <button class="logout-button">Logout</button>
-  </header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="card-ponto">
+          <ion-card-header class="card-header">
+            <ion-card-title class="card-title">Bater Ponto</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="card-content">
+            <ion-button expand="block" color="secondary" class="register-btn" (click)="baterPonto()">Registrar Ponto</ion-button>
+            <!-- Mensagem de confirmação exibida com data binding -->
+            <ion-text color="success" class="confirm-msg">{{ pontoMsg }}</ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
 
-  <section class="ponto-main">
-    <div class="card">
-      <h2>Bater Ponto</h2>
-      <button class="ponto-button" (click)="baterPonto()">Registrar Ponto</button>
-      <p id="ponto-msg"></p> <!-- Mensagem de confirmação -->
-    </div>
-  
-    <div class="card">
-      <h2>Último Ponto Registrado:</h2>
-      <div id="ultimo-ponto" style="font-weight: bold;">{{ ultimoPonto }}</div>
-    </div>
-  </section>
+      <ion-col size="12">
+        <ion-card class="card-ponto">
+          <ion-card-header class="card-header">
+            <ion-card-title class="card-title">Último Ponto Registrado</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="card-content">
+            <!-- Exibe o último ponto registrado com data binding -->
+            <ion-text color="dark" class="last-registered">{{ ultimoPonto }}</ion-text>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
 
-  <footer class="ponto-footer">
-    <p>&copy; 2024 Sua Empresa</p>
-  </footer>
-</div>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="footer-title">&copy; 2024 - TesteApp</ion-title>
+  </ion-toolbar>
+</ion-footer>
